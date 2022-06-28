@@ -13,6 +13,24 @@
 		4C156AB7286AFBC10036A8C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AA5286AFBC00036A8C1 /* ContentView.swift */; };
 		4C156AB8286AFBC10036A8C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AA6286AFBC10036A8C1 /* Assets.xcassets */; };
 		4C156AB9286AFBC10036A8C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AA6286AFBC10036A8C1 /* Assets.xcassets */; };
+		4C156AC7286AFD6C0036A8C1 /* LossyearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AC5286AFD6C0036A8C1 /* LossyearView.swift */; };
+		4C156AC9286AFDC80036A8C1 /* LossyearFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AC8286AFDC80036A8C1 /* LossyearFilter.swift */; };
+		4C156ACA286AFDC80036A8C1 /* LossyearFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AC8286AFDC80036A8C1 /* LossyearFilter.swift */; };
+		4C156ACC286AFDF30036A8C1 /* MaskFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACB286AFDF30036A8C1 /* MaskFilter.swift */; };
+		4C156ACD286AFDF30036A8C1 /* MaskFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACB286AFDF30036A8C1 /* MaskFilter.swift */; };
+		4C156ACF286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACE286AFE3A0036A8C1 /* LossyearKernel.metal */; };
+		4C156AD0286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACE286AFE3A0036A8C1 /* LossyearKernel.metal */; };
+		4C156AD2286AFE970036A8C1 /* MaskKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AD1286AFE970036A8C1 /* MaskKernel.metal */; };
+		4C156AD3286AFE970036A8C1 /* MaskKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AD1286AFE970036A8C1 /* MaskKernel.metal */; };
+		4C156AD6286B00E10036A8C1 /* LossyearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AD5286B00E10036A8C1 /* LossyearView.swift */; };
+		4C156ADB286B023C0036A8C1 /* lossyear.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD8286B023B0036A8C1 /* lossyear.tiff */; };
+		4C156ADC286B023C0036A8C1 /* lossyear.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD8286B023B0036A8C1 /* lossyear.tiff */; };
+		4C156ADD286B023C0036A8C1 /* background_raw.tif in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD9286B023C0036A8C1 /* background_raw.tif */; };
+		4C156ADE286B023C0036A8C1 /* background_raw.tif in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD9286B023C0036A8C1 /* background_raw.tif */; };
+		4C156ADF286B023C0036A8C1 /* datamask.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156ADA286B023C0036A8C1 /* datamask.tiff */; };
+		4C156AE0286B023C0036A8C1 /* datamask.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156ADA286B023C0036A8C1 /* datamask.tiff */; };
+		4C156AE2286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */; };
+		4C156AE3286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +40,16 @@
 		4C156AAB286AFBC10036A8C1 /* ForestLossMetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestLossMetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C156AB1286AFBC10036A8C1 /* ForestLossMetalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestLossMetalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C156AB3286AFBC10036A8C1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		4C156AC5286AFD6C0036A8C1 /* LossyearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyearView.swift; sourceTree = "<group>"; };
+		4C156AC8286AFDC80036A8C1 /* LossyearFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyearFilter.swift; sourceTree = "<group>"; };
+		4C156ACB286AFDF30036A8C1 /* MaskFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskFilter.swift; sourceTree = "<group>"; };
+		4C156ACE286AFE3A0036A8C1 /* LossyearKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LossyearKernel.metal; sourceTree = "<group>"; };
+		4C156AD1286AFE970036A8C1 /* MaskKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MaskKernel.metal; sourceTree = "<group>"; };
+		4C156AD5286B00E10036A8C1 /* LossyearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyearView.swift; sourceTree = "<group>"; };
+		4C156AD8286B023B0036A8C1 /* lossyear.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = lossyear.tiff; sourceTree = "<group>"; };
+		4C156AD9286B023C0036A8C1 /* background_raw.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = background_raw.tif; sourceTree = "<group>"; };
+		4C156ADA286B023C0036A8C1 /* datamask.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = datamask.tiff; sourceTree = "<group>"; };
+		4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				4C156AA3286AFBC00036A8C1 /* Shared */,
+				4C156AD4286B003A0036A8C1 /* iOS */,
 				4C156AB2286AFBC10036A8C1 /* macOS */,
 				4C156AAC286AFBC10036A8C1 /* Products */,
 			);
@@ -54,8 +83,10 @@
 		4C156AA3286AFBC00036A8C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4C156AC4286AFD4E0036A8C1 /* Views */,
+				4C156AC3286AFD160036A8C1 /* Shaders */,
+				4C156AC2286AFD0A0036A8C1 /* Resources */,
 				4C156AA4286AFBC00036A8C1 /* ForestLossMetalDemoApp.swift */,
-				4C156AA5286AFBC00036A8C1 /* ContentView.swift */,
 				4C156AA6286AFBC10036A8C1 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -73,9 +104,48 @@
 		4C156AB2286AFBC10036A8C1 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				4C156AC5286AFD6C0036A8C1 /* LossyearView.swift */,
 				4C156AB3286AFBC10036A8C1 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		4C156AC2286AFD0A0036A8C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C156AD9286B023C0036A8C1 /* background_raw.tif */,
+				4C156ADA286B023C0036A8C1 /* datamask.tiff */,
+				4C156AD8286B023B0036A8C1 /* lossyear.tiff */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C156AC3286AFD160036A8C1 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				4C156AC8286AFDC80036A8C1 /* LossyearFilter.swift */,
+				4C156ACE286AFE3A0036A8C1 /* LossyearKernel.metal */,
+				4C156ACB286AFDF30036A8C1 /* MaskFilter.swift */,
+				4C156AD1286AFE970036A8C1 /* MaskKernel.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		4C156AC4286AFD4E0036A8C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C156AA5286AFBC00036A8C1 /* ContentView.swift */,
+				4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C156AD4286B003A0036A8C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4C156AD5286B00E10036A8C1 /* LossyearView.swift */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +227,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C156ADB286B023C0036A8C1 /* lossyear.tiff in Resources */,
 				4C156AB8286AFBC10036A8C1 /* Assets.xcassets in Resources */,
+				4C156ADF286B023C0036A8C1 /* datamask.tiff in Resources */,
+				4C156ADD286B023C0036A8C1 /* background_raw.tif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +238,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C156ADC286B023C0036A8C1 /* lossyear.tiff in Resources */,
 				4C156AB9286AFBC10036A8C1 /* Assets.xcassets in Resources */,
+				4C156AE0286B023C0036A8C1 /* datamask.tiff in Resources */,
+				4C156ADE286B023C0036A8C1 /* background_raw.tif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +253,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C156AB6286AFBC10036A8C1 /* ContentView.swift in Sources */,
+				4C156AD2286AFE970036A8C1 /* MaskKernel.metal in Sources */,
 				4C156AB4286AFBC10036A8C1 /* ForestLossMetalDemoApp.swift in Sources */,
+				4C156AC9286AFDC80036A8C1 /* LossyearFilter.swift in Sources */,
+				4C156ACF286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */,
+				4C156AD6286B00E10036A8C1 /* LossyearView.swift in Sources */,
+				4C156ACC286AFDF30036A8C1 /* MaskFilter.swift in Sources */,
+				4C156AE2286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +268,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C156AB7286AFBC10036A8C1 /* ContentView.swift in Sources */,
+				4C156AD3286AFE970036A8C1 /* MaskKernel.metal in Sources */,
+				4C156AC7286AFD6C0036A8C1 /* LossyearView.swift in Sources */,
 				4C156AB5286AFBC10036A8C1 /* ForestLossMetalDemoApp.swift in Sources */,
+				4C156ACA286AFDC80036A8C1 /* LossyearFilter.swift in Sources */,
+				4C156AD0286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */,
+				4C156ACD286AFDF30036A8C1 /* MaskFilter.swift in Sources */,
+				4C156AE3286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +411,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTLLINKER_FLAGS = "-fcikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalflapjack.ForestLossMetalDemo;
 				PRODUCT_NAME = ForestLossMetalDemo;
 				SDKROOT = iphoneos;
@@ -353,6 +443,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTLLINKER_FLAGS = "-fcikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalflapjack.ForestLossMetalDemo;
 				PRODUCT_NAME = ForestLossMetalDemo;
 				SDKROOT = iphoneos;
@@ -383,6 +475,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
+				MTLLINKER_FLAGS = "-fcikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalflapjack.ForestLossMetalDemo;
 				PRODUCT_NAME = ForestLossMetalDemo;
 				SDKROOT = macosx;
@@ -411,6 +505,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
+				MTLLINKER_FLAGS = "-fcikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalflapjack.ForestLossMetalDemo;
 				PRODUCT_NAME = ForestLossMetalDemo;
 				SDKROOT = macosx;
