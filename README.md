@@ -4,6 +4,10 @@
 
 This is a simple demonstration of using Metal shader code to you you visualise geospacial data without first turning the data into an image meant for human consumption. There are three source images used in this demo: a mask image, a Landsat satellite image (which has red and multiple infrared channels), and a final image that contains year of forest loss. None of these images are designed for direct human viewing, but with custom shaders we can do that conversion at display time on the GPU.
 
+## Code license
+
+The source code for this project is released in the public domain. See UNLICENSE file for details.
+
 ## Data source
 
 This demo contains three GEOTIFF images from the Global Forest Watch "Hansen" dataset, which can be found here:
