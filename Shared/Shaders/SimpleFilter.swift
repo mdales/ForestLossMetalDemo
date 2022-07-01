@@ -7,15 +7,15 @@
 
 import MetalKit
 
-class MaskFilter: CIFilter {
+class SimpleFilter: CIFilter {
     private let kernel: CIColorKernel
 
     var inputImage: CIImage?
 
-    override init() {
+    init(functionName: String) {
         let url = Bundle.main.url(forResource: "default", withExtension: "metallib")!
         let data = try! Data(contentsOf: url)
-        kernel = try! CIColorKernel(functionName: "mask_shader", fromMetalLibraryData: data)
+        kernel = try! CIColorKernel(functionName: functionName, fromMetalLibraryData: data)
         super.init()
     }
 

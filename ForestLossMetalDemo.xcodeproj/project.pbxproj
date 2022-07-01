@@ -16,8 +16,8 @@
 		4C156AC7286AFD6C0036A8C1 /* LossyearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AC5286AFD6C0036A8C1 /* LossyearView.swift */; };
 		4C156AC9286AFDC80036A8C1 /* LossyearFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AC8286AFDC80036A8C1 /* LossyearFilter.swift */; };
 		4C156ACA286AFDC80036A8C1 /* LossyearFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AC8286AFDC80036A8C1 /* LossyearFilter.swift */; };
-		4C156ACC286AFDF30036A8C1 /* MaskFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACB286AFDF30036A8C1 /* MaskFilter.swift */; };
-		4C156ACD286AFDF30036A8C1 /* MaskFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACB286AFDF30036A8C1 /* MaskFilter.swift */; };
+		4C156ACC286AFDF30036A8C1 /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACB286AFDF30036A8C1 /* SimpleFilter.swift */; };
+		4C156ACD286AFDF30036A8C1 /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACB286AFDF30036A8C1 /* SimpleFilter.swift */; };
 		4C156ACF286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACE286AFE3A0036A8C1 /* LossyearKernel.metal */; };
 		4C156AD0286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156ACE286AFE3A0036A8C1 /* LossyearKernel.metal */; };
 		4C156AD2286AFE970036A8C1 /* MaskKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AD1286AFE970036A8C1 /* MaskKernel.metal */; };
@@ -25,12 +25,14 @@
 		4C156AD6286B00E10036A8C1 /* LossyearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AD5286B00E10036A8C1 /* LossyearView.swift */; };
 		4C156ADB286B023C0036A8C1 /* lossyear.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD8286B023B0036A8C1 /* lossyear.tiff */; };
 		4C156ADC286B023C0036A8C1 /* lossyear.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD8286B023B0036A8C1 /* lossyear.tiff */; };
-		4C156ADD286B023C0036A8C1 /* background_raw.tif in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD9286B023C0036A8C1 /* background_raw.tif */; };
-		4C156ADE286B023C0036A8C1 /* background_raw.tif in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD9286B023C0036A8C1 /* background_raw.tif */; };
+		4C156ADD286B023C0036A8C1 /* last.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD9286B023C0036A8C1 /* last.tiff */; };
+		4C156ADE286B023C0036A8C1 /* last.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156AD9286B023C0036A8C1 /* last.tiff */; };
 		4C156ADF286B023C0036A8C1 /* datamask.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156ADA286B023C0036A8C1 /* datamask.tiff */; };
 		4C156AE0286B023C0036A8C1 /* datamask.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C156ADA286B023C0036A8C1 /* datamask.tiff */; };
 		4C156AE2286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */; };
 		4C156AE3286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */; };
+		4C156AE6286F49740036A8C1 /* LandsatKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AE5286F49740036A8C1 /* LandsatKernel.metal */; };
+		4C156AE7286F49740036A8C1 /* LandsatKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AE5286F49740036A8C1 /* LandsatKernel.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,15 +44,16 @@
 		4C156AB3286AFBC10036A8C1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		4C156AC5286AFD6C0036A8C1 /* LossyearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyearView.swift; sourceTree = "<group>"; };
 		4C156AC8286AFDC80036A8C1 /* LossyearFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyearFilter.swift; sourceTree = "<group>"; };
-		4C156ACB286AFDF30036A8C1 /* MaskFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskFilter.swift; sourceTree = "<group>"; };
+		4C156ACB286AFDF30036A8C1 /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
 		4C156ACE286AFE3A0036A8C1 /* LossyearKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LossyearKernel.metal; sourceTree = "<group>"; };
 		4C156AD1286AFE970036A8C1 /* MaskKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MaskKernel.metal; sourceTree = "<group>"; };
 		4C156AD5286B00E10036A8C1 /* LossyearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossyearView.swift; sourceTree = "<group>"; };
 		4C156AD8286B023B0036A8C1 /* lossyear.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = lossyear.tiff; sourceTree = "<group>"; };
-		4C156AD9286B023C0036A8C1 /* background_raw.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = background_raw.tif; sourceTree = "<group>"; };
+		4C156AD9286B023C0036A8C1 /* last.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = last.tiff; sourceTree = "<group>"; };
 		4C156ADA286B023C0036A8C1 /* datamask.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = datamask.tiff; sourceTree = "<group>"; };
 		4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewCoordinator.swift; sourceTree = "<group>"; };
 		4C156AE4286F477A0036A8C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4C156AE5286F49740036A8C1 /* LandsatKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LandsatKernel.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +118,7 @@
 		4C156AC2286AFD0A0036A8C1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4C156AD9286B023C0036A8C1 /* background_raw.tif */,
+				4C156AD9286B023C0036A8C1 /* last.tiff */,
 				4C156ADA286B023C0036A8C1 /* datamask.tiff */,
 				4C156AD8286B023B0036A8C1 /* lossyear.tiff */,
 			);
@@ -127,8 +130,9 @@
 			children = (
 				4C156AC8286AFDC80036A8C1 /* LossyearFilter.swift */,
 				4C156ACE286AFE3A0036A8C1 /* LossyearKernel.metal */,
-				4C156ACB286AFDF30036A8C1 /* MaskFilter.swift */,
+				4C156ACB286AFDF30036A8C1 /* SimpleFilter.swift */,
 				4C156AD1286AFE970036A8C1 /* MaskKernel.metal */,
+				4C156AE5286F49740036A8C1 /* LandsatKernel.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -232,7 +236,7 @@
 				4C156ADB286B023C0036A8C1 /* lossyear.tiff in Resources */,
 				4C156AB8286AFBC10036A8C1 /* Assets.xcassets in Resources */,
 				4C156ADF286B023C0036A8C1 /* datamask.tiff in Resources */,
-				4C156ADD286B023C0036A8C1 /* background_raw.tif in Resources */,
+				4C156ADD286B023C0036A8C1 /* last.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +247,7 @@
 				4C156ADC286B023C0036A8C1 /* lossyear.tiff in Resources */,
 				4C156AB9286AFBC10036A8C1 /* Assets.xcassets in Resources */,
 				4C156AE0286B023C0036A8C1 /* datamask.tiff in Resources */,
-				4C156ADE286B023C0036A8C1 /* background_raw.tif in Resources */,
+				4C156ADE286B023C0036A8C1 /* last.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +258,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C156AE6286F49740036A8C1 /* LandsatKernel.metal in Sources */,
 				4C156AB6286AFBC10036A8C1 /* ContentView.swift in Sources */,
 				4C156AD2286AFE970036A8C1 /* MaskKernel.metal in Sources */,
 				4C156AB4286AFBC10036A8C1 /* ForestLossMetalDemoApp.swift in Sources */,
 				4C156AC9286AFDC80036A8C1 /* LossyearFilter.swift in Sources */,
 				4C156ACF286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */,
 				4C156AD6286B00E10036A8C1 /* LossyearView.swift in Sources */,
-				4C156ACC286AFDF30036A8C1 /* MaskFilter.swift in Sources */,
+				4C156ACC286AFDF30036A8C1 /* SimpleFilter.swift in Sources */,
 				4C156AE2286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,13 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C156AE7286F49740036A8C1 /* LandsatKernel.metal in Sources */,
 				4C156AB7286AFBC10036A8C1 /* ContentView.swift in Sources */,
 				4C156AD3286AFE970036A8C1 /* MaskKernel.metal in Sources */,
 				4C156AC7286AFD6C0036A8C1 /* LossyearView.swift in Sources */,
 				4C156AB5286AFBC10036A8C1 /* ForestLossMetalDemoApp.swift in Sources */,
 				4C156ACA286AFDC80036A8C1 /* LossyearFilter.swift in Sources */,
 				4C156AD0286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */,
-				4C156ACD286AFDF30036A8C1 /* MaskFilter.swift in Sources */,
+				4C156ACD286AFDF30036A8C1 /* SimpleFilter.swift in Sources */,
 				4C156AE3286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

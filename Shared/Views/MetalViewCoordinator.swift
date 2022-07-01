@@ -17,11 +17,9 @@ class Coordinator : NSObject, MTKViewDelegate {
     var scaleFilter: CIFilter
     var combineFilter: CIFilter
 
-    var maskFilter: MaskFilter
-    var backgroundExposureFilter: CIFilter
-    var backgroundContrastFilter: CIFilter
+    var maskFilter: SimpleFilter
+    var landsatFilter:SimpleFilter
     var backgroundCombineFilter: CIFilter
-    var backgroundTameFilter: CIFilter
 
     var maskImage: CIImage
     var backgroundImage: CIImage
@@ -40,33 +38,24 @@ class Coordinator : NSObject, MTKViewDelegate {
 
         maskImage = CIImage(contentsOf: Bundle.main.url(forResource: "datamask", withExtension: "tiff")!)!
         lossyearImage = CIImage(contentsOf: Bundle.main.url(forResource: "lossyear", withExtension: "tiff")!)!
-        backgroundImage = CIImage(contentsOf: Bundle.main.url(forResource: "background_raw", withExtension: "tif")!)!
+        backgroundImage = CIImage(contentsOf: Bundle.main.url(forResource: "last", withExtension: "tiff")!)!
 
-        maskFilter = MaskFilter()
+        maskFilter = SimpleFilter(functionName: "mask_shader")
         maskFilter.inputImage = maskImage
 
-        backgroundExposureFilter = CIFilter(name: "CIExposureAdjust")!
-        backgroundExposureFilter.setValue(backgroundImage, forKey: kCIInputImageKey)
-        backgroundExposureFilter.setValue(4, forKey: kCIInputEVKey)
-
-        backgroundContrastFilter = CIFilter(name: "CIGammaAdjust")!
-        backgroundContrastFilter.setValue(backgroundExposureFilter.outputImage!, forKey: kCIInputImageKey)
-        backgroundContrastFilter.setValue(1.4, forKey: "inputPower")
+        landsatFilter = SimpleFilter(functionName: "landsat_shader")
+        landsatFilter.inputImage = backgroundImage
 
         backgroundCombineFilter = CIFilter(name: "CISourceOverCompositing")!
-        backgroundCombineFilter.setValue(maskFilter.outputImage!, forKey: kCIInputBackgroundImageKey)
-        backgroundCombineFilter.setValue(backgroundContrastFilter.outputImage, forKey: kCIInputImageKey)
-
-        backgroundTameFilter = CIFilter(name: "CIExposureAdjust")!
-        backgroundTameFilter.setValue(backgroundCombineFilter.outputImage!, forKey: kCIInputImageKey)
-        backgroundTameFilter.setValue(-0.8, forKey: kCIInputEVKey)
+        backgroundCombineFilter.setValue(landsatFilter.outputImage!, forKey: kCIInputBackgroundImageKey)
+        backgroundCombineFilter.setValue(maskFilter.outputImage, forKey: kCIInputImageKey)
 
         yearFilter = LossyearFilter()
         yearFilter.inputImage = lossyearImage
         yearFilter.year = 20
 
         combineFilter = CIFilter(name: "CISourceOverCompositing")!
-        combineFilter.setValue(backgroundTameFilter.outputImage!, forKey: kCIInputBackgroundImageKey)
+        combineFilter.setValue(backgroundCombineFilter.outputImage!, forKey: kCIInputBackgroundImageKey)
 
         scaleFilter = CIFilter(name: "CILanczosScaleTransform")!
 

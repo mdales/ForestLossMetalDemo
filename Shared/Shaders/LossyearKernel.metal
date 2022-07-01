@@ -11,7 +11,7 @@ extern "C" { namespace coreimage {
 
     float4 my_shader(float4 pixel, float year) {
         if ((pixel.r > 0.0) and (pixel.r < year)) {
-            return float4(1.0, 0.6, 0.6, 1.0);
+            return float4(1.0, 0.4, 0.4, 1.0);
         } else {
             return float4(0.0, 0.0, 0.0, 0.0);
         };
