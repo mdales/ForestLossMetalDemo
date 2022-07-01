@@ -13,10 +13,14 @@ extern "C" { namespace coreimage {
 
         // This data is landsat data, and has the following channels as per:
         //     https://data.globalforestwatch.org/documents/gfw::tree-cover-loss/explore
+        //
         // Red: Red visible spectrum
         // Green: Near Infra Red (good for showing vegitation)
         // Blue: Short Wave Infrared band 1
         // Alpha: Short Wave Infrared band 2
+        //
+        // For details of the bands see the landsat page:
+        //     https://landsat.gsfc.nasa.gov/satellites/landsat-8/landsat-8-bands/ 
         //
         // This shader creates a false colour image that attempts to emphises vegitation density whilst
         // retaining land features from the red channel.
