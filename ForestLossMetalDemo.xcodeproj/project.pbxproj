@@ -50,6 +50,7 @@
 		4C156AD9286B023C0036A8C1 /* background_raw.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = background_raw.tif; sourceTree = "<group>"; };
 		4C156ADA286B023C0036A8C1 /* datamask.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = datamask.tiff; sourceTree = "<group>"; };
 		4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewCoordinator.swift; sourceTree = "<group>"; };
+		4C156AE4286F477A0036A8C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 		4C156A9E286AFBC00036A8C1 = {
 			isa = PBXGroup;
 			children = (
+				4C156AE4286F477A0036A8C1 /* README.md */,
 				4C156AA3286AFBC00036A8C1 /* Shared */,
 				4C156AD4286B003A0036A8C1 /* iOS */,
 				4C156AB2286AFBC10036A8C1 /* macOS */,
