@@ -33,6 +33,10 @@
 		4C156AE3286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */; };
 		4C156AE6286F49740036A8C1 /* LandsatKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AE5286F49740036A8C1 /* LandsatKernel.metal */; };
 		4C156AE7286F49740036A8C1 /* LandsatKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C156AE5286F49740036A8C1 /* LandsatKernel.metal */; };
+		4CD4D736288826EB00AFB80E /* SaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D735288826EB00AFB80E /* SaveImage.swift */; };
+		4CD4D7382888278000AFB80E /* SaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D7372888278000AFB80E /* SaveImage.swift */; };
+		4CD4D73B2888319D00AFB80E /* ImageCompositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D73A2888319D00AFB80E /* ImageCompositionModel.swift */; };
+		4CD4D73C2888319D00AFB80E /* ImageCompositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4D73A2888319D00AFB80E /* ImageCompositionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,9 @@
 		4C156AE1286B3C0A0036A8C1 /* MetalViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewCoordinator.swift; sourceTree = "<group>"; };
 		4C156AE4286F477A0036A8C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4C156AE5286F49740036A8C1 /* LandsatKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LandsatKernel.metal; sourceTree = "<group>"; };
+		4CD4D735288826EB00AFB80E /* SaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImage.swift; sourceTree = "<group>"; };
+		4CD4D7372888278000AFB80E /* SaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImage.swift; sourceTree = "<group>"; };
+		4CD4D73A2888319D00AFB80E /* ImageCompositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompositionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +95,7 @@
 		4C156AA3286AFBC00036A8C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4CD4D7392888317900AFB80E /* Model */,
 				4C156AC4286AFD4E0036A8C1 /* Views */,
 				4C156AC3286AFD160036A8C1 /* Shaders */,
 				4C156AC2286AFD0A0036A8C1 /* Resources */,
@@ -111,6 +119,7 @@
 			children = (
 				4C156AC5286AFD6C0036A8C1 /* LossyearView.swift */,
 				4C156AB3286AFBC10036A8C1 /* macOS.entitlements */,
+				4CD4D735288826EB00AFB80E /* SaveImage.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -150,8 +159,17 @@
 			isa = PBXGroup;
 			children = (
 				4C156AD5286B00E10036A8C1 /* LossyearView.swift */,
+				4CD4D7372888278000AFB80E /* SaveImage.swift */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		4CD4D7392888317900AFB80E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CD4D73A2888319D00AFB80E /* ImageCompositionModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +282,10 @@
 				4C156AB4286AFBC10036A8C1 /* ForestLossMetalDemoApp.swift in Sources */,
 				4C156AC9286AFDC80036A8C1 /* LossyearFilter.swift in Sources */,
 				4C156ACF286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */,
+				4CD4D7382888278000AFB80E /* SaveImage.swift in Sources */,
 				4C156AD6286B00E10036A8C1 /* LossyearView.swift in Sources */,
 				4C156ACC286AFDF30036A8C1 /* SimpleFilter.swift in Sources */,
+				4CD4D73B2888319D00AFB80E /* ImageCompositionModel.swift in Sources */,
 				4C156AE2286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,8 +300,10 @@
 				4C156AC7286AFD6C0036A8C1 /* LossyearView.swift in Sources */,
 				4C156AB5286AFBC10036A8C1 /* ForestLossMetalDemoApp.swift in Sources */,
 				4C156ACA286AFDC80036A8C1 /* LossyearFilter.swift in Sources */,
+				4CD4D736288826EB00AFB80E /* SaveImage.swift in Sources */,
 				4C156AD0286AFE3A0036A8C1 /* LossyearKernel.metal in Sources */,
 				4C156ACD286AFDF30036A8C1 /* SimpleFilter.swift in Sources */,
+				4CD4D73C2888319D00AFB80E /* ImageCompositionModel.swift in Sources */,
 				4C156AE3286B3C0A0036A8C1 /* MetalViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

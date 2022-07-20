@@ -9,12 +9,10 @@ import SwiftUI
 import MetalKit
 
 struct LossyearView: NSViewRepresentable {
-
-    @Binding var year: Double
-    @AppStorage("showBackground") private var showBackground = true
+    @EnvironmentObject private var model: ImageCompositionModel
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+        Coordinator(self, model: model)
     }
 
     func makeNSView(context: NSViewRepresentableContext<LossyearView>) -> MTKView {
@@ -33,9 +31,6 @@ struct LossyearView: NSViewRepresentable {
     }
 
     func updateNSView(_ nsView: MTKView, context: NSViewRepresentableContext<LossyearView>) {
-        context.coordinator.yearFilter.year = year
-        context.coordinator.showBackground = showBackground
         nsView.setNeedsDisplay(nsView.frame)
     }
-
 }
