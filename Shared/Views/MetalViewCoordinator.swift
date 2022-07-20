@@ -13,49 +13,18 @@ class Coordinator : NSObject, MTKViewDelegate {
     var metalCommandQueue: MTLCommandQueue!
     var context : CIContext?
 
-    var yearFilter: LossyearFilter
+    let model: ImageCompositionModel
+
     var scaleFilter: CIFilter
-    var combineFilter: CIFilter
-
-    var maskFilter: SimpleFilter
-    var landsatFilter:SimpleFilter
-    var backgroundCombineFilter: CIFilter
-
-    var maskImage: CIImage
-    var backgroundImage: CIImage
-    var lossyearImage: CIImage
-
     var colorSpace: CGColorSpace
 
-    var showBackground: Bool = true
-
-    init(_ parent: LossyearView) {
+    init(_ parent: LossyearView, model: ImageCompositionModel) {
         if let metalDevice = MTLCreateSystemDefaultDevice() {
             self.metalDevice = metalDevice
             self.context = CIContext(mtlDevice: metalDevice)
         }
         self.metalCommandQueue = metalDevice.makeCommandQueue()!
-
-        maskImage = CIImage(contentsOf: Bundle.main.url(forResource: "datamask", withExtension: "tiff")!)!
-        lossyearImage = CIImage(contentsOf: Bundle.main.url(forResource: "lossyear", withExtension: "tiff")!)!
-        backgroundImage = CIImage(contentsOf: Bundle.main.url(forResource: "last", withExtension: "tiff")!)!
-
-        maskFilter = SimpleFilter(functionName: "mask_shader")
-        maskFilter.inputImage = maskImage
-
-        landsatFilter = SimpleFilter(functionName: "landsat_shader")
-        landsatFilter.inputImage = backgroundImage
-
-        backgroundCombineFilter = CIFilter(name: "CISourceOverCompositing")!
-        backgroundCombineFilter.setValue(landsatFilter.outputImage!, forKey: kCIInputBackgroundImageKey)
-        backgroundCombineFilter.setValue(maskFilter.outputImage, forKey: kCIInputImageKey)
-
-        yearFilter = LossyearFilter()
-        yearFilter.inputImage = lossyearImage
-        yearFilter.year = 20
-
-        combineFilter = CIFilter(name: "CISourceOverCompositing")!
-        combineFilter.setValue(backgroundCombineFilter.outputImage!, forKey: kCIInputBackgroundImageKey)
+        self.model = model
 
         scaleFilter = CIFilter(name: "CILanczosScaleTransform")!
 
@@ -71,8 +40,12 @@ class Coordinator : NSObject, MTKViewDelegate {
     public func draw(in view: MTKView) {
         if let currentDrawable = view.currentDrawable {
 
-            let xscale = view.drawableSize.width / lossyearImage.extent.width
-            let yscale = view.drawableSize.height / lossyearImage.extent.height
+            guard let outputImage = model.getOutputImage else {
+                return
+            }
+
+            let xscale = view.drawableSize.width / outputImage.extent.width
+            let yscale = view.drawableSize.height / outputImage.extent.height
             let scale = min(xscale, yscale)
             if scale == 0.0 {
                 return
@@ -80,13 +53,7 @@ class Coordinator : NSObject, MTKViewDelegate {
 
             let commandBuffer = metalCommandQueue.makeCommandBuffer()
 
-            combineFilter.setValue(yearFilter.outputImage!, forKey: kCIInputImageKey)
-
-            if showBackground {
-                scaleFilter.setValue(combineFilter.outputImage!, forKey: kCIInputImageKey)
-            } else {
-                scaleFilter.setValue(yearFilter.outputImage!, forKey: kCIInputImageKey)
-            }
+            scaleFilter.setValue(outputImage, forKey: kCIInputImageKey)
             scaleFilter.setValue(scale, forKey: kCIInputScaleKey)
             guard let outputImage = scaleFilter.outputImage else {
                 return
@@ -102,4 +69,4 @@ class Coordinator : NSObject, MTKViewDelegate {
             commandBuffer?.commit()
         }
     }
-    }
+}

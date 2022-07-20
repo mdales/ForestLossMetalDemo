@@ -20,7 +20,7 @@ extern "C" { namespace coreimage {
         // Alpha: Short Wave Infrared band 2
         //
         // For details of the bands see the landsat page:
-        //     https://landsat.gsfc.nasa.gov/satellites/landsat-8/landsat-8-bands/ 
+        //    q https://landsat.gsfc.nasa.gov/satellites/landsat-8/landsat-8-bands/ 
         //
         // This shader creates a false colour image that attempts to emphises vegitation density whilst
         // retaining land features from the red channel.
