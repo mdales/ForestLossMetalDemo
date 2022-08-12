@@ -19,7 +19,6 @@ struct ForestLossMetalDemoApp: App {
                 .environmentObject(model)
         }
         .commands {
-            ToolbarCommands()
             CommandGroup(after: .newItem) {
                 Button("Save image...") {
                    if let url = showSavePanel(),

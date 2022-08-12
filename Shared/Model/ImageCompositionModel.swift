@@ -60,7 +60,7 @@ class ImageCompositionModel: ObservableObject {
             combineFilter.setValue(yearFilter.outputImage!, forKey: kCIInputImageKey)
             return combineFilter.outputImage
         } else {
-            return yearFilter.outputImage
+            return maskFilter.outputImage
         }
     }
 
